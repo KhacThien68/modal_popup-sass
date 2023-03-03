@@ -11,7 +11,7 @@ type Button = {
 
 type PopupProps = {
   title?: string
-  header?: React.ReactNode
+  customHeader?: React.ReactNode
   appendStyleContent?: object
   appendStyleModal?: object
   className?: string
@@ -28,7 +28,7 @@ type PopupProps = {
 
 const Popup = ({
   title,
-  header,
+  customHeader,
   appendStyleModal,
   className,
   hasSidebar = false,
@@ -55,14 +55,16 @@ const Popup = ({
         style={{ ...appendStyleModal }}
       >
         <div className={['popup-content', appendStyle].join(' ')}>
-          {header || (
-            <div className="header">
-              <p className="header-title">{title || ''}</p>
-              <button onClick={handleClose} className="button-delete">
-                <span>X</span>
-              </button>
-            </div>
-          )}
+          <div className="header">
+            {customHeader || (
+              <>
+                <p className="header-title">{title || ''}</p>
+                <button onClick={handleClose} className="button-delete">
+                  <span>X</span>
+                </button>
+              </>
+            )}
+          </div>
           <div className="content">{renderContent()}</div>
           {hasFooter && (
             <div style={footerStyle} className="popup-footer">

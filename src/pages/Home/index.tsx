@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Popup from '../../components/popup'
 import { SIDEBAR_LIST } from './constants'
+import { PopupHeader } from './PopupHeader'
 
 const Home = () => {
   const [isShowPopup, setIsShowPopup] = useState(false)
@@ -22,10 +23,10 @@ const Home = () => {
       {isShowPopup && (
         <Popup
           title={'Đây là popup'}
+          customHeader={<PopupHeader />}
           hasSidebar
           sidebarList={SIDEBAR_LIST}
           handleClose={handleClosePopup}
-          hasFooter={true}
           btnCancel={{
             label: 'Cancel',
             event: handleClosePopup,
