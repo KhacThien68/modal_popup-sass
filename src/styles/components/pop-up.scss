@@ -19,6 +19,7 @@
     max-width: 1140px;
     height: 70%;
     min-width: 700px;
+    animation: popup 0.3s ease-in;
 
     .popup-content {
       display: flex;
@@ -94,5 +95,25 @@
         }
       }
     }
+  }
+}
+
+@keyframes popup {
+  0%{
+    opacity: 0;
+  
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes close {
+  0%{
+    opacity: 1;
+  
+  }
+  100%{
+    opacity: 0;
   }
 }
