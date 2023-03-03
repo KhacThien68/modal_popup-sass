@@ -1,0 +1,46 @@
+.settings-container {
+  display: flex;
+
+  .user-info {
+    padding-left: 20px;
+    flex: 1;
+
+    .user-name {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      .name-part {
+        width: 48%;
+
+        p {
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+
+        .content-container {
+          margin-top: 4px;
+          padding: 8px;
+          border: 1px solid #ccc;
+          border-radius: 2px;
+        }
+      }
+    }
+
+    .user-email {
+      margin-top: 20px;
+
+      p {
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .email-content {
+        margin-top: 4px;
+        padding: 8px;
+        border-radius: 2px;
+        background-color: #ededed;
+      }
+    }
+  }
+}

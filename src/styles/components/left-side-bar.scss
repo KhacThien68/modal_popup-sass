@@ -1,0 +1,15 @@
+.left_sidebar-container {
+  width: 202px;
+  height: 100%;
+
+  .sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 16px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+}
